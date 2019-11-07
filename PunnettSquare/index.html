@@ -6,38 +6,41 @@
     </head>
 
     <body>
+
         <h1 id="title">Punnett Square Calculator</h1>
 
-        <div class="wrapper">
+        <div class="tab">
+            <button class="tablinks" onclick="activate(event)">Parent 1</button>
+            <button class="tablinks" onclick="activate(event)">Parent 2</button>
+        </div>
+
+        <div class="tab">
+            <button class="tablinks">Hair</button>
+            <button class="tablinks">Skin</button>
+        </div>
+
+        <div id="card-wrapper">
             <div class="card">
-                <div class="container">
-                    <h4><b>John Doe</b></h4>
-                    <p>Architect & Engineer</p>
-                </div>
+                <h4><b>John Doe</b></h4>
+                <p>Architect &amp; Engineer</p>             
             </div>
 
             <div class="card">
-                <div class="container">
-                    <h4><b>John Doe</b></h4>
-                    <p>Architect & Engineer</p>
-                </div>
+                <h4><b>John Doe</b></h4>
+                <p>Architect &amp; Engineer</p>
             </div>
 
-            
             <div class="card">
-                <div class="container">
-                    <h4><b>John Doe</b></h4>
-                    <p>Architect & Engineer</p>
-                </div>
+                <h4><b>John Doe</b></h4>
+                <p>Architect &amp; Engineer</p>     
             </div>
 
-            
-            <div class="card">
-                <div class="container">
-                    <h4><b>John Doe</b></h4>
-                    <p>Architect & Engineer</p>
-                </div>
+            <div class="card">           
+                <h4><b>John Doe</b></h4>
+                <p>Architect &amp; Engineer</p>
             </div>
         </div>
+
+        <script src="./index.js"></script>
     </body>
 </html>
