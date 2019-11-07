@@ -9,37 +9,29 @@
 
         <h1 id="title">Punnett Square Calculator</h1>
 
-        <div class="tab">
-            <button class="tablinks" onclick="activate(event)">Parent 1</button>
-            <button class="tablinks" onclick="activate(event)">Parent 2</button>
-        </div>
-
-        <div class="tab">
-            <button class="tablinks">Hair</button>
-            <button class="tablinks">Skin</button>
-        </div>
-
+        <div id="tab-wrapper">
+            <div class="tab" id="parent-tab">
+                <button id="default-parent" class="tablinks" onclick="activate(event)">Parent 1</button>
+                <button class="tablinks" onclick="activate(event)">Parent 2</button>
+            </div>
+            
         <div id="card-wrapper">
-            <div class="card">
-                <h4><b>John Doe</b></h4>
-                <p>Architect &amp; Engineer</p>             
+            <div class="card" id="g1">
+                <h4><b>XX</b></h4>
+                <p>Homozygous Dominant</p>             
             </div>
 
-            <div class="card">
-                <h4><b>John Doe</b></h4>
-                <p>Architect &amp; Engineer</p>
+            <div class="card" id="g2">
+                <h4><b>Xx</b></h4>
+                <p>Heterozygous</p>
             </div>
 
-            <div class="card">
-                <h4><b>John Doe</b></h4>
-                <p>Architect &amp; Engineer</p>     
-            </div>
-
-            <div class="card">           
-                <h4><b>John Doe</b></h4>
-                <p>Architect &amp; Engineer</p>
+            <div class="card" id="g3">
+                <h4><b>xx</b></h4>
+                <p>Homozygous Recessive</p>     
             </div>
         </div>
+    </div>
 
         <script src="./index.js"></script>
     </body>
