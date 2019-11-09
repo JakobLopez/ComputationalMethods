@@ -8,6 +8,9 @@
     <h4>Parent 1</h4>
     <div *ngFor="let i of numberOfTraits | fill">
       Trait #{{i + 1}}
+      <input type="radio" name="homozygous-d" value="homozygous-d"> Homozygous Dominant<br>
+      <input type="radio" name="heterozygous" value="heterozygous"> Heterozygous<br>
+      <input type="radio" name="homozygous-r" value="homozygous-r"> Homozygous Recessive<br>
     </div>
   </div>
   <div id="parent2"><h4>Parent 2</h4></div>
