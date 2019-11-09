@@ -1,8 +1,14 @@
 <div id="form">
-  <label>Number of traits per parent: </label> <input type="number" maxlength="1" name="numTraits">
+  <label>Number of traits per parent: </label> <input [(ngModel)]="numberOfTraits" type="number" maxlength="1" name="numTraits">
+  {{numberOfTraits}}
 </div>
 
 <div class="wrapper">
-  <div id="parent1"><h4>Parent 1</h4></div>
+  <div id="parent1">
+    <h4>Parent 1</h4>
+    <div *ngFor="let i of numberOfTraits | fill">
+      Trait #{{i + 1}}
+    </div>
+  </div>
   <div id="parent2"><h4>Parent 2</h4></div>
 </div>

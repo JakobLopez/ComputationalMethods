@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TraitFormComponent implements OnInit {
 
+  numberOfTraits: Number = 0
+
   constructor() { }
 
   ngOnInit() {
