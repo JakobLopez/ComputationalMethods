@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TraitFormComponent implements OnInit {
 
-  numberOfTraits: Number = 0
+  numberOfTraits: Number = 0;
+  parent1Traits = [];
+  aprent2Traits = [];
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }
-
 }

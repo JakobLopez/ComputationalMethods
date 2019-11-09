@@ -2,3 +2,15 @@
     display: flex;
     justify-content: space-around;
 }
+
+.radio{
+    vertical-align: baseline;
+}
+
+li{
+    list-style: none;
+}
+
+.trait-choice{
+    text-align: left;
+}

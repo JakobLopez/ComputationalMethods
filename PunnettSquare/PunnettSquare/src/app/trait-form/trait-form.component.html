@@ -1,16 +1,31 @@
 <div id="form">
-  <label>Number of traits per parent: </label> <input [(ngModel)]="numberOfTraits" type="number" maxlength="1" name="numTraits">
-  {{numberOfTraits}}
+  <label>Number of traits per parent: </label> 
+  <input [(ngModel)]="numberOfTraits" type="number" maxlength="1" name="numTraits">
 </div>
 
 <div class="wrapper">
   <div id="parent1">
-    <h4>Parent 1</h4>
+    <h3>Parent 1</h3>
     <div *ngFor="let i of numberOfTraits | fill">
-      Trait #{{i + 1}}
-      <input type="radio" name="homozygous-d" value="homozygous-d"> Homozygous Dominant<br>
-      <input type="radio" name="heterozygous" value="heterozygous"> Heterozygous<br>
-      <input type="radio" name="homozygous-r" value="homozygous-r"> Homozygous Recessive<br>
+      <li>
+        <b>Trait #{{i + 1}}</b>
+
+        <div class="trait-choice">
+          <input class="radio" type="radio" name="homozygous-d" value="homozygous-d">
+          <label for="homozygous-d">Homozygous Dominant</label>
+        </div>
+        
+        <div class="trait-choice">
+          <input class="radio" type="radio" name="heterozygous" value="heterozygous"> 
+          <label for="heterozygous">Heterozygous</label>
+        </div>
+        
+        <div class="trait-choice"> 
+          <input class="radio" type="radio" name="homozygous-r" value="homozygous-r">
+          <label for="homozygous-r">Homozygous Recessive</label>
+        </div>
+      </li>
+      <br>
     </div>
   </div>
   <div id="parent2"><h4>Parent 2</h4></div>
