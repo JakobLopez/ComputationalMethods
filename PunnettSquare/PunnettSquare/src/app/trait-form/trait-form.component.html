@@ -11,22 +11,26 @@
         <b>Trait #{{i + 1}}</b>
 
         <div class="trait-choice">
-          <input class="radio" type="radio" name="type-{{i}}" value="homozygous-d">
+          <input class="radio" [(ngModel)]="parent1Traits[i]" type="radio" name="type{{i}}" value="homozygous-d">
           <label for="homozygous-d">Homozygous Dominant</label>
         </div>
         
         <div class="trait-choice">
-          <input class="radio" type="radio" name="type-{{i}}" value="heterozygous"> 
+          <input class="radio" [(ngModel)]="parent1Traits[i]" type="radio" name="type{{i}}" value="heterozygous"> 
           <label for="heterozygous">Heterozygous</label>
         </div>
         
         <div class="trait-choice"> 
-          <input class="radio" type="radio" name="type-{{i}}" value="homozygous-r">
+          <input class="radio" [(ngModel)]="parent1Traits[i]" type="radio" name="type{{i}}" value="homozygous-r">
           <label for="homozygous-r">Homozygous Recessive</label>
         </div>
       </li>
       <br>
     </div>
   </div>
+
+  <button (click)="display()">as</button>
+
+
   <div id="parent2"><h4>Parent 2</h4></div>
 </div>
