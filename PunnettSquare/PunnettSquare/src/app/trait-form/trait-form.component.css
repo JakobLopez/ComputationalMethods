@@ -14,3 +14,7 @@ li{
 .trait-choice{
     text-align: left;
 }
+
+h3{
+    border-bottom: 1px solid black;
+}

@@ -4,24 +4,24 @@
 </div>
 
 <div class="wrapper">
-  <div id="parent1">
+  <div class="parent">
     <h3>Parent 1</h3>
     <div *ngFor="let i of numberOfTraits | fill">
       <li>
         <b>Trait #{{i + 1}}</b>
 
         <div class="trait-choice">
-          <input class="radio" type="radio" name="homozygous-d" value="homozygous-d">
+          <input class="radio" type="radio" name="type-{{i}}" value="homozygous-d">
           <label for="homozygous-d">Homozygous Dominant</label>
         </div>
         
         <div class="trait-choice">
-          <input class="radio" type="radio" name="heterozygous" value="heterozygous"> 
+          <input class="radio" type="radio" name="type-{{i}}" value="heterozygous"> 
           <label for="heterozygous">Heterozygous</label>
         </div>
         
         <div class="trait-choice"> 
-          <input class="radio" type="radio" name="homozygous-r" value="homozygous-r">
+          <input class="radio" type="radio" name="type-{{i}}" value="homozygous-r">
           <label for="homozygous-r">Homozygous Recessive</label>
         </div>
       </li>
