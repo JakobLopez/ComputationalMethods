@@ -60,3 +60,7 @@ body{
 .card.active {
     background-color: #ccc;
 }
+
+#calculate{
+    float: right;
+}
