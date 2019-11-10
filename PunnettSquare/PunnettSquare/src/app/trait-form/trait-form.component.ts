@@ -9,39 +9,25 @@ import { FormBuilder, FormControl } from '@angular/forms';
 export class TraitFormComponent implements OnInit {
 
   numberOfTraits: Number = 0;
-  parent1Traits = [];
-  aprent2Traits = [];
-  form;
-  parent1 = {
-    traits: [
-      { name: 'homozygous-d',  selected: true, id: 1 },
-      { name: 'heterozygous',  selected: false, id: 2 },
-      { name: 'homozygous-r',  selected: false, id: 3 },
-    ]
+  parents = {
+    0: [],
+    1: []
   }
+  incompleteForm: boolean = false;
 
   constructor(private formBuilder: FormBuilder) { 
-    this.form = this.formBuilder.group({
-      traits: this.buildTraits()
-    });
+
   }
 
   ngOnInit() {
   }
 
-  buildTraits() {
-    const arr = this.parent1.traits.map(trait => {
-      return this.formBuilder.control(trait.selected);
-    });
-    return this.formBuilder.array(arr);
-  }
 
-  get traits() {
-    return this.form.get('traits');
-  };
-
-  display(){
-    console.log("eyer");
-    console.log(this.parent1Traits);
+  Calculate(){
+    if(this.parents[0].length != this.numberOfTraits || this.parents[1].length != this.numberOfTraits){
+      this.incompleteForm = true;
+    }else{
+      this.incompleteForm = false;
+    }
   }
 }

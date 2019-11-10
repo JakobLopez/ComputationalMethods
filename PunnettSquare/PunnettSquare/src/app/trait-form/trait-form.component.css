@@ -18,3 +18,13 @@ li{
 h3{
     border-bottom: 1px solid black;
 }
+
+button{
+    text-align: center;
+}
+
+p{
+    color: red;
+    text-align: center;
+    font-size: large;
+}

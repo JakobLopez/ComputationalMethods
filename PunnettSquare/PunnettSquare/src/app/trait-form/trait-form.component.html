@@ -3,34 +3,37 @@
   <input [(ngModel)]="numberOfTraits" type="number" maxlength="1" name="numTraits">
 </div>
 
-<div class="wrapper">
-  <div class="parent">
-    <h3>Parent 1</h3>
-    <div *ngFor="let i of numberOfTraits | fill">
+<div *ngIf="numberOfTraits != 0" class="wrapper">
+    <div *ngFor="let parent of 2 | fill">
+    <h3>Parent {{parent + 1}}</h3>
+    <div *ngFor="let trait of numberOfTraits | fill">
       <li>
-        <b>Trait #{{i + 1}}</b>
+        <b>Trait #{{trait + 1}}</b>
 
         <div class="trait-choice">
-          <input class="radio" [(ngModel)]="parent1Traits[i]" type="radio" name="type{{i}}" value="homozygous-d">
+          <input class="radio" [(ngModel)]="parents[parent][trait]" type="radio" name="{{parent}}-type-{{trait}}" value="homozygous-d">
           <label for="homozygous-d">Homozygous Dominant</label>
         </div>
         
         <div class="trait-choice">
-          <input class="radio" [(ngModel)]="parent1Traits[i]" type="radio" name="type{{i}}" value="heterozygous"> 
+          <input class="radio" [(ngModel)]="parents[parent][trait]" type="radio" name="{{parent}}-type-{{trait}}" value="heterozygous"> 
           <label for="heterozygous">Heterozygous</label>
         </div>
         
         <div class="trait-choice"> 
-          <input class="radio" [(ngModel)]="parent1Traits[i]" type="radio" name="type{{i}}" value="homozygous-r">
+          <input class="radio" [(ngModel)]="parents[parent][trait]" type="radio" name="{{parent}}-type-{{trait}}" value="homozygous-r">
           <label for="homozygous-r">Homozygous Recessive</label>
         </div>
       </li>
       <br>
     </div>
   </div>
+</div>
 
-  <button (click)="display()">as</button>
+<div>
+    <button *ngIf="numberOfTraits != 0" (click)="Calculate()">Calculate</button>
+</div>
 
-
-  <div id="parent2"><h4>Parent 2</h4></div>
+<div>
+  <p *ngIf="incompleteForm">Incomplete form. Each trait must have a selection.</p>
 </div>
