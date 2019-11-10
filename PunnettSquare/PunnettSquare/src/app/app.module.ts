@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TraitFormComponent } from './trait-form/trait-form.component';
-import { FillPipe } from './fill.pipe';
+import { FillPipe } from './pipe/fill.pipe';
 
 @NgModule({
   declarations: [

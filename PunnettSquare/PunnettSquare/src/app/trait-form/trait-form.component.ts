@@ -14,6 +14,7 @@ export class TraitFormComponent implements OnInit {
     1: []
   }
   incompleteForm: boolean = false;
+  trait: String = "A";
 
   constructor(private formBuilder: FormBuilder) { 
 
@@ -23,11 +24,42 @@ export class TraitFormComponent implements OnInit {
   }
 
 
-  Calculate(){
+  calculate(){
     if(this.parents[0].length != this.numberOfTraits || this.parents[1].length != this.numberOfTraits){
       this.incompleteForm = true;
     }else{
       this.incompleteForm = false;
+      this.renameGenotypes();
+      this.trait = "A";
     }
   }
+
+  renameGenotypes(){
+    for (var i = 0; i < this.numberOfTraits; i++) {
+      this.parents[0][i] = this.genotype(this.parents[0][i]);
+      this.parents[1][i] = this.genotype(this.parents[1][i]);
+      console.log(this.trait);
+      this.setNextTraitLetter()
+    }
+  }
+
+  genotype(type: String){
+    console.log(type);
+    switch(type) {
+      case "homozygous-d":
+        return this.trait.repeat(2);
+      case "heterozygous":
+        return this.trait + this.trait.toLowerCase();
+      case "homozygous-r":
+        return this.trait.toLowerCase().repeat(2);
+      default:
+        break;
+    }
+  }
+
+  setNextTraitLetter(){
+    this.trait = String.fromCharCode(this.trait.charCodeAt(0) + 1)
+  }
+
+  
 }
