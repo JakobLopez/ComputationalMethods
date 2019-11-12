@@ -8,12 +8,14 @@ import { PermutationService } from 'src/app/service/permutation.service';
 })
 export class PunnetSquareComponent implements OnInit {
 
-  permutation = []
+  parent1 = []
+  parent2 = []
 
   constructor(public permutationService: PermutationService) { }
 
   ngOnInit() {
-    this.permutation = this.permutationService.permutations
+    this.parent1 = this.permutationService.parent1Perms;
+    this.parent2 = this.permutationService.parent2Perms;
   }
 
 }

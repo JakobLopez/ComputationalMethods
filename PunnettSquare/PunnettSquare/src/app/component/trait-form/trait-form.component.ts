@@ -17,13 +17,12 @@ export class TraitFormComponent implements OnInit {
   incompleteForm: boolean = false;
   trait: String = "A";
 
-  constructor(private permutationService: PermutationService,
+  constructor(public permutationService: PermutationService,
     private router: Router) { 
 
   }
 
   ngOnInit() {
-    this.permutationService.permutations = ["fish"];
   }
 
 
@@ -34,6 +33,8 @@ export class TraitFormComponent implements OnInit {
       this.incompleteForm = false;
       this.renameGenotypes();
       this.trait = "A";
+      this.permutationService.parent1Perms = this.permutationService.getAllGenotypes(this.parents[0]);
+      this.permutationService.parent2Perms = this.permutationService.getAllGenotypes(this.parents[1]);
       this.router.navigateByUrl('/PunnettSquare');
     }
   }
