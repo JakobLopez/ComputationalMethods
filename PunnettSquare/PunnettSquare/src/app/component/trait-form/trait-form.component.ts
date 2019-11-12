@@ -42,13 +42,11 @@ export class TraitFormComponent implements OnInit {
     for (var i = 0; i < this.numberOfTraits; i++) {
       this.parents[0][i] = this.genotype(this.parents[0][i]);
       this.parents[1][i] = this.genotype(this.parents[1][i]);
-      console.log(this.trait);
       this.setNextTraitLetter()
     }
   }
 
   genotype(type: String){
-    console.log(type);
     switch(type) {
       case "homozygous-d":
         return this.trait.repeat(2);

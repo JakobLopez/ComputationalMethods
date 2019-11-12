@@ -10,7 +10,7 @@ export class PunnetSquareComponent implements OnInit {
 
   permutation = []
 
-  constructor(private permutationService: PermutationService) { }
+  constructor(public permutationService: PermutationService) { }
 
   ngOnInit() {
     this.permutation = this.permutationService.permutations
