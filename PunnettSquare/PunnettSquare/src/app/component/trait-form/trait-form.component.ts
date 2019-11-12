@@ -27,7 +27,8 @@ export class TraitFormComponent implements OnInit {
 
 
   calculate(){
-    if(this.parents[0].length != this.numberOfTraits || this.parents[1].length != this.numberOfTraits){
+    if(this.parents[0].includes(undefined) || this.parents[0].length != this.numberOfTraits ||
+    this.parents[1].includes(undefined) || this.parents[1].length != this.numberOfTraits){
       this.incompleteForm = true;
     }else{
       this.incompleteForm = false;
