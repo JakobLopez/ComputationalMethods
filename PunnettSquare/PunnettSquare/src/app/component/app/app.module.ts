@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TraitFormComponent } from './trait-form/trait-form.component';
-import { FillPipe } from './pipe/fill.pipe';
+import { TraitFormComponent } from '../trait-form/trait-form.component';
+import { FillPipe } from '../../pipe/fill.pipe';
 
 @NgModule({
   declarations: [
