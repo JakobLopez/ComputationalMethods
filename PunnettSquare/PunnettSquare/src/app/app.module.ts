@@ -10,7 +10,7 @@ import { PunnetSquareComponent } from './component/punnet-square/punnet-square.c
 
 const appRoutes: Routes = [
   { path: 'TraitForm', component: TraitFormComponent },
-  { path: '', component: PunnetSquareComponent },
+  { path: '', component: TraitFormComponent },
   { path: 'PunnettSquare', component: PunnetSquareComponent },
 ];
 
