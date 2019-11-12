@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { PermutationService } from 'src/app/service/permutation.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trait-form',
@@ -16,11 +17,13 @@ export class TraitFormComponent implements OnInit {
   incompleteForm: boolean = false;
   trait: String = "A";
 
-  constructor(private formBuilder: FormBuilder) { 
+  constructor(private permutationService: PermutationService,
+    private router: Router) { 
 
   }
 
   ngOnInit() {
+    this.permutationService.permutations = ["fish"];
   }
 
 
@@ -31,6 +34,7 @@ export class TraitFormComponent implements OnInit {
       this.incompleteForm = false;
       this.renameGenotypes();
       this.trait = "A";
+      this.router.navigateByUrl('/PunnettSquare');
     }
   }
 

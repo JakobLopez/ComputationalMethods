@@ -1,4 +1,4 @@
-<div id="form">
+<div class="center">
   <label>Number of traits per parent: </label> 
   <input [(ngModel)]="numberOfTraits" type="number" maxlength="1" name="numTraits">
 </div>
@@ -30,10 +30,11 @@
   </div>
 </div>
 
-<div>
-    <button *ngIf="numberOfTraits != 0" (click)="calculate()">Calculate</button>
+<div class="center">
+  <button *ngIf="numberOfTraits != 0" (click)="calculate()">Calculate</button>
 </div>
 
 <div>
   <p *ngIf="incompleteForm">Incomplete form. Each trait must have a selection.</p>
 </div>
+
