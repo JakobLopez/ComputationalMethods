@@ -6,7 +6,8 @@
 }
 
 .row{
-        width: 20%;
+        /* width: 20%; */
         text-align: center;
+        display: inline;
 }
 

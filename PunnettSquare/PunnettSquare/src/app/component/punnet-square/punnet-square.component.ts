@@ -8,16 +8,17 @@ import { PermutationService } from 'src/app/service/permutation.service';
 })
 export class PunnetSquareComponent implements OnInit {
 
-  parent1 = ["A", "a"]
-  parent2 = ["A", "a"]
+  parent1 = ["A"]
+  parent2 = ["a"]
   calculation = []
 
   constructor(public permutationService: PermutationService) { }
 
   ngOnInit() {
-    // this.parent1 = this.permutationService.parent1Perms;
-    // this.parent2 = this.permutationService.parent2Perms;
+    this.parent1 = this.permutationService.parent1Perms;
+    this.parent2 = this.permutationService.parent2Perms;
     this.calculation = this.permutationService.calcPunnettSquare(this.parent1, this.parent2);
+    //this.calculation = ["AABB","AABB","AABB","AABB","AABB","AABB","AABB","AABB","AaBB","AaBB","AaBB","AaBB","AaBB","AaBB","AaBB","AaBB"]
   }
 
 
