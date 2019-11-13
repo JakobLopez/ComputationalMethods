@@ -18,7 +18,6 @@ export class PunnetSquareComponent implements OnInit {
     this.parent1 = this.permutationService.parent1Perms;
     this.parent2 = this.permutationService.parent2Perms;
     this.calculation = this.permutationService.calcPunnettSquare(this.parent1, this.parent2);
-    //this.calculation = ["AABB","AABB","AABB","AABB","AABB","AABB","AABB","AABB","AaBB","AaBB","AaBB","AaBB","AaBB","AaBB","AaBB","AaBB"]
   }
 
 

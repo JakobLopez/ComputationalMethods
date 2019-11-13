@@ -6,9 +6,8 @@
 }
 
 .row{
-        /* width: 20%; */
-        text-align: center;
         display: inline;
+        white-space: nowrap;
 }
 
 .wrapper{
