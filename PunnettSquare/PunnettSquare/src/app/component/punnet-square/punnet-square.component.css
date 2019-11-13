@@ -1,7 +1,7 @@
 .square{
         display: inline-block;
-        padding: 20px;
-        width: 20%;
+        padding: 8px;
+        width: 10%;
         border: 1px solid black;
 }
 
@@ -9,5 +9,9 @@
         /* width: 20%; */
         text-align: center;
         display: inline;
+}
+
+.wrapper{
+        text-align: center;
 }
 
