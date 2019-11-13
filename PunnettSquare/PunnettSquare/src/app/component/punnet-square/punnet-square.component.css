@@ -1,0 +1,12 @@
+.square{
+        display: inline-block;
+        padding: 20px;
+        width: 20%;
+        border: 1px solid black;
+}
+
+.row{
+        width: 20%;
+        text-align: center;
+}
+

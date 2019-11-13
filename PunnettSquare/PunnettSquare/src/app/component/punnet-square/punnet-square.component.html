@@ -1,5 +1,17 @@
+<div class="row" *ngFor="let row of calculation">
+  <div class="square" *ngFor="let col of row">
+    <label>{{col}}</label>
+  </div>
+</div>
+
+
 <p>
-  parent1 = {{parent1}}
-  parent2 = {{parent2}}  
-  
+parent1 => {{parent1}}
 </p>
+
+<p>
+    parent2 => {{parent2}}
+</p>
+
+
+{{calculation}}
