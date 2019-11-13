@@ -1,6 +1,6 @@
 <div class="center">
   <label>Number of traits per parent: </label> 
-  <input [(ngModel)]="numberOfTraits" type="number" maxlength="1" name="numTraits">
+  <input [(ngModel)]="numberOfTraits" type="number" value="1" min="1" max="5" name="numTraits">
 </div>
 
 <div *ngIf="numberOfTraits != 0" class="wrapper">

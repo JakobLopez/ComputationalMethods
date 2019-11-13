@@ -1,7 +1,7 @@
 .square{
         display: inline-block;
         padding: 8px;
-        width: 10%;
+        width: 100px;
         border: 1px solid black;
 }
 
@@ -15,26 +15,26 @@
 
 .header-row{
         white-space: nowrap;
-        display: inline-block;
+        /* display: inline-block; */
 }
 
 .header-column{
         font-weight: bold;
         padding: 8px;
         display: inline-block;
-        width: 10%;
+        width: 60px;
 }
 
 .header{
-        white-space: nowrap;
         font-weight: bold;
         padding: 8px;
-        width: 10%;
-        text-align: center;
+        width: 100px;
+        /* text-align: center; */
+        display: inline-block;
 }
 
 .container{
-        display: block;
+        display: inline-block;
         text-align: center;
 }
 

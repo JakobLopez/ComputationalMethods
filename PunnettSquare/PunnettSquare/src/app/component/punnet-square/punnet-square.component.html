@@ -1,15 +1,23 @@
 
- <div class="wrapper">
+ <!-- <div class="wrapper">
   <div class="header-row" *ngFor="let parent of parent1">
     <div class="header">{{parent}}</div>
   </div>
-</div> 
+</div>  -->
 
 <div class="wrapper">
   <div class="row" *ngFor="let row of calculation; let i = index">
     <span class="header-column">{{parent2[i]}}</span>
-    <div class="square" *ngFor="let col of row">
-      <label >{{col}}</label>
+    <div class="container">
+      <div class="header-row" *ngIf="i == 0" >
+        <div class="header" *ngFor="let parent of parent1">
+          {{parent}}
+         </div>
+      </div>
+      <div class="square" *ngFor="let col of row">
+        <label >{{col}}</label>
+      </div>
     </div>
+    
   </div>
 </div>
