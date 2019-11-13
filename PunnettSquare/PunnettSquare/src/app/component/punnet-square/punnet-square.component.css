@@ -6,11 +6,35 @@
 }
 
 .row{
-        /* display: inline; */
         white-space: nowrap;
 }
 
 .wrapper{
+        text-align: center;
+}
+
+.header-row{
+        white-space: nowrap;
+        display: inline-block;
+}
+
+.header-column{
+        font-weight: bold;
+        padding: 8px;
+        display: inline-block;
+        width: 10%;
+}
+
+.header{
+        white-space: nowrap;
+        font-weight: bold;
+        padding: 8px;
+        width: 10%;
+        text-align: center;
+}
+
+.container{
+        display: block;
         text-align: center;
 }
 
