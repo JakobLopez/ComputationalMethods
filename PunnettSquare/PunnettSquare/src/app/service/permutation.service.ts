@@ -47,7 +47,7 @@ export class PermutationService {
     return newlist;
   }
 
-  calcPunnettSquare(parent1, parent2){
+  async calcPunnettSquare(parent1, parent2){
     var data = [];
     //row
     for(var p2 in parent2){
@@ -67,4 +67,29 @@ export class PermutationService {
     }
     return data;
   }
+
+  alphabetize(data){
+    var newData = data;
+    for(var i = 0; i < data.length; i++){
+      for(var j = 1; j < data[i].length; j ++){
+        var arr = data[i][j].split("");
+        for(var k = 0; k < arr.length; k+=2){
+          if(arr[k] > arr[k + 1] ){
+            var temp = arr[k];
+            arr[k] = arr[k + 1]
+            arr[k + 1] = temp;  
+            
+          }
+        }
+
+        var newstring = arr.join("");
+        newData[i][j] = newstring; 
+        console.log(newstring)
+      }
+    }
+    console.log(newData);
+    return newData;
+  }
+
+
 }

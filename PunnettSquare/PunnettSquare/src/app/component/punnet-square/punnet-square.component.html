@@ -43,5 +43,11 @@
   </div>
 </div>
 
-
-<!-- <div class="header-row" *ngIf="i == 0" > -->
+<div class="wrapper">
+  <h3>Results</h3>
+  <div *ngFor="let key of objectKeys(counts)">
+    <label class="key"><strong>{{key}}</strong></label> 
+    <span class="value"> | {{counts[key]}}</span> 
+    <span> | {{(counts[key] / punnettSquareArea) * 100}}%</span>
+  </div> 
+</div>

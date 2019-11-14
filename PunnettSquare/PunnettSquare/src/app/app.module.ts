@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TraitFormComponent } from './component/trait-form/trait-form.component';
 import { FillPipe } from './pipe/fill.pipe';
 import { PunnetSquareComponent } from './component/punnet-square/punnet-square.component';
+import { KeyPipe } from './pipe/key.pipe';
 
 const appRoutes: Routes = [
   { path: 'TraitForm', component: TraitFormComponent },
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
     AppComponent,
     TraitFormComponent,
     FillPipe,
-    PunnetSquareComponent
+    PunnetSquareComponent,
+    KeyPipe
   ],
   imports: [
     BrowserModule,
