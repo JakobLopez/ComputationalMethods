@@ -26,9 +26,9 @@
   <div class="row" *ngFor="let row of calculation; let i = index">
     <span class="header-column">{{parent2[i]}}</span>
     <div class="a" *ngIf="i == 0">
-      <div class="top-row" *ngFor="let col of row">
+      <div class="top-row" *ngFor="let col of row; let j = index">
           <div class="parent">
-            {{parent1[i]}}
+            {{parent1[j]}}
           </div>
           <div class="square">
             <label >{{col}}</label>
