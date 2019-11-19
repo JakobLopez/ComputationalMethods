@@ -24,7 +24,6 @@ export class PunnetSquareComponent implements OnInit {
     this.parent1 = this.permutationService.parent1Perms;
     this.parent2 = this.permutationService.parent2Perms;
     this.punnettSquareArea = Math.pow(this.parent1.length, 2);
-    console.log(this.punnettSquareArea)
     this.getResults();
   }
 

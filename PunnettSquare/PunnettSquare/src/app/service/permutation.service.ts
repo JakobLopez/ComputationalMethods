@@ -84,10 +84,8 @@ export class PermutationService {
 
         var newstring = arr.join("");
         newData[i][j] = newstring; 
-        console.log(newstring)
       }
     }
-    console.log(newData);
     return newData;
   }
 
