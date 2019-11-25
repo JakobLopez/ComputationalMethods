@@ -1,0 +1,98 @@
+
+Jakob Lopez and Samuel Mullins
+11-25-2019
+
+This program searches through a genbank file containing
+the DNA sequence for Mycoplasma genitalium to find the different
+genes spread throughout the bacteria. Genes begin with a start codon
+ATG and end in either TAA, TAG or TGA. The length of a gene must be a
+multiple of 3. Open Reading Frames are sequences of amino acids that
+specify possible genes. To find ORFs, 3 different offsets are used.
+With each offset, genes are the looked for in the same fashion, in 
+groups of 3s. 
+
+NOTE: In the output, negative ORFs are given. The negative value 
+represents the genes found in the reverse complement of the DNA.
+Genbank indexes starting at 1, which is why indices have a +/- 1.
+
+Here is the translation of the first gene found in ORF 0:
+MIANYITKAFEIKKTIDEKLREFKQQNLALKKAYSANKKSEANKASINELKVNLKTLKKQLKQEKNTTKKQSKKELKPLLKEHHTALKLHDEFNHDLRKWFKKLNFMVKKYNRLENSQKKFCLVKKLKALFKKQDETLQSELRPKLKTFGVINFEYKRAVKESNVFRLVHFAKNIFKPFLFFNLTKIFMRNKVYEALDSVGLKREHAYRYPHEFSGGQRQRIAIARALITKPKLIIADELISALDVSIQAQVINILKDLAKKHNLTVLFIAHDLSMVQTVCNRLIIMHRGKIVERGSVDEIFSNPVHPYTRSLIKASPKLSKINVDLASFDENFTYDSDYSLTNMPFYIKVPNSEEHELYCTQKQFDS
+
+Reading Frame 0
+Start: 108073 	 End: 109176 	 Length: 1103
+Start: 115216 	 End: 116871 	 Length: 1655
+Start: 127279 	 End: 128709 	 Length: 1430
+Start: 144973 	 End: 146133 	 Length: 1160
+Start: 163591 	 End: 165384 	 Length: 1793
+Start: 242581 	 End: 244566 	 Length: 1985
+Start: 259177 	 End: 262326 	 Length: 3149
+Start: 268012 	 End: 269244 	 Length: 1232
+Start: 271840 	 End: 273114 	 Length: 1274
+Start: 284518 	 End: 285780 	 Length: 1262
+
+Reading Frame 1
+Start: 686 	 End: 1825 	 Length: 1139
+Start: 9923 	 End: 11056 	 Length: 1133
+Start: 94535 	 End: 95779 	 Length: 1244
+Start: 99383 	 End: 101776 	 Length: 2393
+Start: 105452 	 End: 106561 	 Length: 1109
+Start: 121940 	 End: 123199 	 Length: 1259
+Start: 156566 	 End: 157855 	 Length: 1289
+Start: 199610 	 End: 201034 	 Length: 1424
+Start: 240323 	 End: 242065 	 Length: 1742
+Start: 246128 	 End: 247423 	 Length: 1295
+Start: 258041 	 End: 259156 	 Length: 1115
+Start: 276647 	 End: 278272 	 Length: 1625
+Start: 282104 	 End: 283324 	 Length: 1220
+Start: 316196 	 End: 317305 	 Length: 1109
+
+Reading Frame 2
+Start: 4812 	 End: 7319 	 Length: 2507
+Start: 22389 	 End: 23555 	 Length: 1166
+Start: 70899 	 End: 72569 	 Length: 1670
+Start: 96933 	 End: 98900 	 Length: 1967
+Start: 131919 	 End: 132962 	 Length: 1043
+Start: 149673 	 End: 150965 	 Length: 1292
+Start: 165471 	 End: 167126 	 Length: 1655
+Start: 181005 	 End: 182861 	 Length: 1856
+Start: 227823 	 End: 229064 	 Length: 1241
+Start: 338367 	 End: 339752 	 Length: 1385
+Start: 477168 	 End: 478469 	 Length: 1301
+
+Reading Frame 0
+Start: 560496 	 End: 561830 	 Length: 1334
+Start: 554430 	 End: 555614 	 Length: 1184
+Start: 524151 	 End: 525785 	 Length: 1634
+Start: 466410 	 End: 467546 	 Length: 1136
+Start: 411549 	 End: 412934 	 Length: 1385
+Start: 401901 	 End: 402923 	 Length: 1022
+Start: 396282 	 End: 397424 	 Length: 1142
+Start: 374979 	 End: 376706 	 Length: 1727
+Start: 370950 	 End: 371963 	 Length: 1013
+
+Reading Frame -1
+Start: 577268 	 End: 578581 	 Length: 1313
+Start: 494984 	 End: 496615 	 Length: 1631
+Start: 435944 	 End: 438640 	 Length: 2696
+Start: 432110 	 End: 434155 	 Length: 2045
+Start: 430580 	 End: 432028 	 Length: 1448
+Start: 412973 	 End: 414244 	 Length: 1271
+Start: 377975 	 End: 379027 	 Length: 1052
+Start: 372926 	 End: 373999 	 Length: 1073
+Start: 366527 	 End: 367684 	 Length: 1157
+Start: 329831 	 End: 330985 	 Length: 1154
+Start: 326030 	 End: 327052 	 Length: 1022
+Start: 153920 	 End: 154963 	 Length: 1043
+Start: 66227 	 End: 67318 	 Length: 1091
+
+Reading Frame -2
+Start: 571522 	 End: 573150 	 Length: 1628
+Start: 536041 	 End: 537564 	 Length: 1523
+Start: 502828 	 End: 503976 	 Length: 1148
+Start: 493912 	 End: 494967 	 Length: 1055
+Start: 470077 	 End: 471234 	 Length: 1157
+Start: 427090 	 End: 428112 	 Length: 1022
+Start: 403723 	 End: 404985 	 Length: 1262
+Start: 384148 	 End: 385446 	 Length: 1298
+Start: 333337 	 End: 334419 	 Length: 1082
+
